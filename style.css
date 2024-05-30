@@ -1,0 +1,131 @@
+body {
+    background-color: aliceblue;
+    font-family: "Chewy", Times, serif, system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kontainer {
+    width: auto;
+    margin: auto;
+    padding: 0 1em;
+}
+
+
+.kontainer header h1 {
+    text-align: center;
+    padding: 25px;
+    border: 3px solid slategrey;
+    border-radius: 10px;
+}
+
+.kontainer header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: 5px solid black;
+    border-radius: 100px;
+    background-color: black;
+    margin-bottom: 20px;
+}
+
+.kontainer header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-family: fantasy;
+    margin: 10px;
+}
+
+.kontainer header nav a.aktiv {
+    color: lawngreen;
+}
+
+.kontainer header nav a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+
+
+.kontainer main {
+    border: 5px solid black;
+    border-radius: 4px;
+    padding: 1em;
+}
+
+.kontainer .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em; 
+    margin-left: 1em;
+    text-align:justify
+}
+
+.kontainer .box .ruta{
+   margin-top: 2em;
+}
+
+
+.kontainer main img {
+    margin-top: 2em;
+    width: 100%;
+    max-width: 35em;
+}
+
+.kontainer main p {
+    margin-right: 2em;
+    font-weight: bolder;
+}
+
+.Första-stora-ord::first-letter {
+    font-size: 4em;
+    color: #e80222;
+    font-weight: bold;
+    line-height: .75;
+}
+
+.bildtext {
+    display: grid;
+    justify-content: center;
+}
+
+.kontainer footer {
+    margin-top: 2em;
+    background-color: black;
+    border: 5px solid black;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.kontainer footer p {
+    display: grid;
+    justify-content: center;
+    color: #fff;
+
+}
+
+
+@media (max-width: 600px) {
+    .kontainer .box{
+        grid-template-columns: 1fr;
+    }
+    .kontainer header nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    .kontainer header nav a{
+        margin: 5px 0;
+    }
+}
+
+@media ((min-width: 601px) and (max-width: 1024px)) {
+    .kontainer .box{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width:1025){
+    .kontainer .box{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

@@ -1,0 +1,213 @@
+body {
+    background: url(https://happywall-img-gallery.imgix.net/6582/summer_sky_display.jpg);
+    background-attachment: fixed;
+    background-color: aliceblue;
+    font-family: "Open Sans", "Helvetica" sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.kontainer {
+    width: auto;
+    margin: auto;
+    grid-template-areas:
+        "sh sh sh"
+        "tb tb tb"
+        "gr gr gr"
+        "gr gr gr"
+        "sf sf sf";
+}
+
+
+.kontainer header h1 {
+    background-color: lightblue;
+    text-align: center;
+    width: auto;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    border: 3px solid slategrey;
+    border-radius: 0.4em;
+}
+
+.kontainer header nav {
+    display: flex;
+    justify-content: space-evenly;
+    border: 5px solid black;
+    border-radius: 100em;
+    background-color: black;
+    margin-bottom: 2em;
+}
+
+.kontainer header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-family: fantasy;
+}
+
+.kontainer header nav a.aktiv {
+    color: lawngreen;
+}
+
+.kontainer header nav a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+
+.kontainer main  .box {
+    padding: 1em;
+    border: 5px solid black;
+    border-radius: 2em;
+    background-color: lightblue;
+}
+
+.kontainer .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: justify
+}
+
+
+.Första-stora-ord::first-letter {
+    font-size: 4em;
+    color: #e80222;
+    font-weight: bold;
+    line-height: .75;
+}
+
+
+.rutnät {
+    margin-top: 2em;
+    display: grid;
+    grid-area: gr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.rutnät .flygplan {
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px;
+}
+
+.rutnät .flygplan img {
+    width: 100%;
+    height: 90%;
+}
+
+
+footer {
+    margin-top: 2em;
+    background-color: darkblue;
+    border: 5px solid darkblue;
+    border-radius: 1em;
+}
+
+footer p {
+    display: grid;
+    justify-content: center;
+    color: #fff;
+
+}
+
+footer p a{
+    color: lawngreen;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    .kontainer .box {
+        grid-template-columns: 1fr;
+    }
+
+    .kontainer header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kontainer header nav a {
+        margin: 5px 0;
+    }
+
+    .rutnät {
+        grid-template-columns: 1fr;
+    }
+
+
+
+
+    body {
+        font-size: 0.8em;
+    }
+
+    .kontainer header h1 {
+        font-size: 1.2em;
+    }
+
+    .kontainer header nav a {
+        font-size: 0.7em;
+    }
+
+    .rutnät .flygplan {
+        font-size: 0.8em;
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
+}
+
+@media ((min-width: 601px) and (max-width: 1024px)) {
+    .kontainer {
+        grid-template-areas:
+            "sh"
+            "tb"
+            "gr"
+            "sf";
+    }
+
+    .kontainer .box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rutnät{
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+
+    body {
+        font-size: 1.2em;
+    }
+
+    .kontainer header h1 {
+        font-size: 1.5em;
+    }
+
+    .kontainer header nav a {
+        font-size: 0.8em;
+    }
+
+    .rutnät .flygplan {
+        font-size: 0.9em;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width:1025) {
+    .kontainer .box {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
